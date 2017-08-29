@@ -1,31 +1,32 @@
 {
-  "name": "vueTest",
-  "version": "0.1.0",
-  "description": "madshawn's vue test",
-  "homepage": "http://www.navinfo.com/",
-  "author": "madshawn",
-  "scripts": {
-    "lint": "eslint --ignore-path .eslintignore ./apps ./scripts",
-    "lint:fix": "npm run lint -- --fix",
-    "doc": "jsdoc -r -c ./conf.json -d sdk",
-    "start": "npm run build:debug && http-server -a localhost -p 8000 -c-1 ../WebApp"
-  },
-  "devDependencies": {
-    "eslint": "^3.19.0",
-    "eslint-config-airbnb-base": "^9.0.0",
-    "eslint-config-angular": "^0.5.0",
-    "eslint-plugin-angular": "^2.4.0",
-    "eslint-plugin-import": "^2.0.1",
-    "http-server": "^0.9.0",
-    "jsdoc": "^3.4.2"
-  },
-  "repository": {
-    "type": "git",
-    "url": ""
-  },
-  "license": "ISC",
-  "dependencies": {
-    "vue": "^2.4.2",
-    "webpack": "^3.5.5"
-  }
+    "name": "githugPage",
+    "version": "0.1.0",
+    "description": "madshawn's githug page.",
+    "homepage": "https://madshawn.github.io/",
+    "author": "madshawn",
+    "scripts": {
+        "lint": "eslint --ignore-path .eslintignore ./scripts",
+        "lint:fix": "npm run lint -- --fix",
+        "doc": "jsdoc -r -c ./conf.json -d sdk",
+        "start": "webpack && webpack-dev-server --open"
+    },
+    "devDependencies": {
+        "eslint": "^3.19.0",
+        "eslint-config-airbnb-base": "^9.0.0",
+        "eslint-config-angular": "^0.5.0",
+        "eslint-plugin-angular": "^2.4.0",
+        "eslint-plugin-import": "^2.0.1",
+        "http-server": "^0.9.0",
+        "jsdoc": "^3.4.2",
+        "webpack-dev-server": "^2.7.1"
+    },
+    "repository": {
+        "type": "git",
+        "url": ""
+    },
+    "license": "ISC",
+    "dependencies": {
+        "vue": "^2.4.2",
+        "webpack": "^3.5.5"
+    }
 }
