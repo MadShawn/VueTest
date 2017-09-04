@@ -6,6 +6,11 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 module.exports = {
     devtool: 'eval-source-map',
     entry: './app/main.js', // 已多次提及的唯一入口文件
+    resolve: {
+        alias: {
+            vue: 'vue/dist/vue.js'
+        }
+    },
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle-[hash].js' // 打包后输出文件的文件名
