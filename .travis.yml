@@ -6,13 +6,14 @@ before_install:
 install: 
   - npm install
 script: 
-  - npm run lint && npm run dist
+  - npm run lint && npm run build
 after_script:
   - cd dist
   - git init
   - git add .
   - git commit -m "Update pages"
-  - git push -f "https://${GITHUB_TOKEN}@${PAGES_REF}" master:master
+  - git pull "https://${GITHUB_TOKEN}@${PAGES_REF}" master
+  - git push "https://${GITHUB_TOKEN}@${PAGES_REF}" master
 cache:
   directories:
     - node_modules
