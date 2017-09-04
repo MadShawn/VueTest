@@ -10,7 +10,7 @@ script:
 after_script:
   - cd dist
   - git init
-  - git pull "https://${GITHUB_TOKEN}@${PAGES_REF}" master --allow-unrelated-histories
+  - git pull "https://${GITHUB_TOKEN}@${PAGES_REF}" master
   - git add .
   - git commit -m "Update pages"
   - git push "https://${GITHUB_TOKEN}@${PAGES_REF}" master
