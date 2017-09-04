@@ -7,10 +7,9 @@ install:
   - npm install
 script: 
   - npm run lint && npm run build
-deploy:
-  provider: pages
-  skip_cleanup: true
-  github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
-  file: build/*
-  on:
-    branch: master
+after_script:
+	-	cd build
+  - git init
+  - git add .
+  - git commit -m "Update Pages"
+  - git push -f "https://${GITHUB_TOKEN}@${PAGES_REF}" master:master
