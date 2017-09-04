@@ -11,5 +11,6 @@ after_script:
 	-	cd build
   - git init
   - git add .
-  - git commit -m "Update Pages"
-  - git push -f "https://${GITHUB_TOKEN}@${PAGES_REF}" master:master
+  - git commit -m "Update pages"
+  - git push -f "https://${GITHUB_TOKEN}@${PAGES_REF}" master:gh-pages
+  
