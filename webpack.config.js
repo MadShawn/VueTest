@@ -12,7 +12,7 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, 'build'),
-        filename: 'bundle.js', // 打包后输出文件的文件名
+        filename: 'bundle-[hash].js', // 打包后输出文件的文件名
         publicPath: 'assets'
     },
     devServer: {

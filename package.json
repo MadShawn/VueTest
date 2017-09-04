@@ -8,7 +8,7 @@
     "lint": "eslint --ignore-path .eslintignore ./scripts",
     "lint:fix": "npm run lint -- --fix",
     "doc": "jsdoc -r -c ./conf.json -d sdk",
-    "build": "webpack",
+    "build": "rm -fr ./build/* && webpack",
     "start": "webpack-dev-server --open",
     "dist": "rm -fr ./dist/* && webpack --config ./webpack.production.config.js --progress"
   },
