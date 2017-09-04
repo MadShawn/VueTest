@@ -12,4 +12,7 @@ after_script:
   - git init
   - git add .
   - git commit -m "Update pages"
-  - git push "https://${GITHUB_TOKEN}@${PAGES_REF}" master
+  - git push -f "https://${GITHUB_TOKEN}@${PAGES_REF}" master:gh_pages
+cache:
+  directories:
+    - node_modules
