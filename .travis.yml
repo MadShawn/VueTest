@@ -1,8 +1,8 @@
 language: "node_js"
 node_js: 
-  - "4.4.5"
+  - "8.1.4"
 before_install: 
-  - npm update -g npm@4.5.0
+  - npm update -g npm
 install: 
   - npm install
 script: 
