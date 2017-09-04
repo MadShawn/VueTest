@@ -6,9 +6,9 @@ before_install:
 install: 
   - npm install
 script: 
-  - npm run lint && npm run build
+  - npm run lint && npm run dist
 after_script:
-  - cd build
+  - cd dist
   - git init
   - git add .
   - git commit -m "Update pages"
