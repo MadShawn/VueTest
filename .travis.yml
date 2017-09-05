@@ -1,6 +1,6 @@
-language: "node_js"
-node_js: 
-  - "8.1.4"
+# 自动更新github pages的配置
+language: node_js
+node_js: stable
 before_install: 
   - npm update -g npm
 install: 
