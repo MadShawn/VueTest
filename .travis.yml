@@ -10,10 +10,10 @@ script:
 after_script:
   - cd dist
   - git init
-  - git pull "https://${GITHUB_TOKEN}@${PAGES_REF}" master
+  - git pull "https://${PAGES_REF}" master
   - git add .
   - git commit -m "Update pages"
-  - git push "https://${GITHUB_TOKEN}@${PAGES_REF}" master
+  - git push "https://${PAGES_REF}" master
 cache:
   directories:
     - node_modules
