@@ -20,7 +20,8 @@ after_script:
   - git init
   - git add .
   - git commit -m 'travis automatic build and deploy'
-  - git push -f "https://${GITHUB_TOKEN}@${PAGES_REF}" master:build
+  # 这里需要注意：要发布到github pages的话，分支的名字必须为gh-pages
+  - git push -f "https://${GITHUB_TOKEN}@${PAGES_REF}" master:gh-pages
 cache:
   directories:
     - node_modules
