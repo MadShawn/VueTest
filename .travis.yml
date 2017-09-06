@@ -9,6 +9,7 @@ script:
   - npm run lint && npm run build
 after_script:
   - git clone "https://${GITHUB_TOKEN}@${PAGES_REF}" upper_repos
+  - mkdir ./upper_repos/vue/
   - cp -fr ./build/* ./upper_repos/vue/
   - cd upper_repos
   - git add .
