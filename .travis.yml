@@ -1,0 +1,27 @@
+# 自动更新github pages的配置
+language: node_js
+node_js: stable
+before_install: 
+  - npm update -g npm
+install: 
+  - npm install
+script: 
+  - npm run lint && npm run build
+# 更新别的repo
+# after_script:
+#   - git clone "https://${GITHUB_TOKEN}@${PAGES_REF}" upper_repos
+#   - cp -fr ./build/* ./upper_repos/
+#   - cd upper_repos
+#   - git add .
+#   - git commit -m 'travis automatic build and deploy'
+#   - git push
+after_script:
+  - cd ./build
+  - git init
+  - git add .
+  - git commit -m 'travis automatic build and deploy'
+  # 这里需要注意：要发布到github pages的话，分支的名字必须为gh-pages
+  - git push -f "https://${GITHUB_TOKEN}@${PAGES_REF}" master:gh-pages
+cache:
+  directories:
+    - node_modules

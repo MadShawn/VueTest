@@ -10,7 +10,7 @@
     "doc": "jsdoc -r -c ./conf.json -d sdk",
     "build": "webpack",
     "start": "webpack-dev-server --open",
-    "dist": "rm -fr ./dist/* && webpack --config ./webpack.production.config.js --progress"
+    "dist": "rm -fr ./dist && webpack --config ./webpack.production.config.js --progress"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
