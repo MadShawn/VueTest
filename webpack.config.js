@@ -12,8 +12,8 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, 'build'),
-        filename: 'bundle.js', // 打包后输出文件的文件名
-        publicPath: 'assets'
+        filename: 'bundle.js' // 打包后输出文件的文件名
+        // publicPath: 'assets'
     },
     devServer: {
         contentBase: './build', // 本地服务器所加载的页面所在的目录
