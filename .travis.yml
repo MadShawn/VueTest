@@ -16,7 +16,7 @@ script:
 #   - git commit -m 'travis automatic build and deploy'
 #   - git push
 after_script:
-  - cd ./build
+  - cd ./dist
   - git init
   - git add .
   - git commit -m 'travis automatic build and deploy'
